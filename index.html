@@ -1,23 +1,28 @@
 <html>
-<head>
-<script type="text/javascript">
-function go() {
-    // Create a message object
-    var message = {
-        status: "complete",
-        courseId: "course-1234", // Replace with your actual course ID
-        timestamp: new Date().toISOString()
-    };
 
-    // Send the message to the parent window
-    window.parent.postMessage(message, "*");
-}
-</script>
+<head>
+    <script type="text/javascript">
+        function go() {
+            // Create a message object
+            alert("ready")
+            var message = {
+                status: "complete",
+                courseId: "course-1234", // Replace with your actual course ID
+                timestamp: new Date().toISOString()
+            };
+
+            // Send the message to the parent window
+            window.parent.postMessage(message, "*");
+            alert("done")
+        }
+    </script>
 </head>
+
 <body>
-<h1>Hello</h1>
-<form>
-<input type="button" onclick="go()">
-</form>
+    <h1>Hello</h1>
+    <form>
+        <input type="button" onclick="go()" value="Do it">
+    </form>
 </body>
+
 </html>
